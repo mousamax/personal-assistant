@@ -1,0 +1,18 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "description": {
+        "type": "string",
+        "description": "A brief description of the task"
+      },
+      "category": {
+        "type": "string",
+        "description": "The category to which the task belongs"
+      }
+    },
+    "required": ["description", "category"]
+  }
+}
