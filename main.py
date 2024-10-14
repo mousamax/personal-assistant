@@ -1,5 +1,5 @@
 from fastapi import FastAPI, HTTPException
-from tasks_agent import TasksAgent
+from agents.tasks_agent import TasksAgent
 
 app = FastAPI()
 

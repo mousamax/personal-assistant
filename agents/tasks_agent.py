@@ -17,7 +17,7 @@ class TasksAgent:
             ]
          """
         
-        self.user_prompt = "ONLY OUTPUT JSON FORMAT no human language. user_query: "
+        self.user_prompt = "ONLY OUTPUT JSON FORMAT no human language. json:"
 
     def generate_todos(self, user_query: str) -> dict | None:
         messages = [
@@ -27,7 +27,7 @@ class TasksAgent:
             },
             {
                 "role": "user",
-                "content": self.user_prompt + user_query
+                "content": user_query + self.user_prompt 
             }
         ]
         response = self.llm_api.get_json_response(self.model, messages, "todos.json")
