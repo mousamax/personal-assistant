@@ -1,4 +1,5 @@
 from llm_api import LLM_API
+from models.member import Member
 
 class TasksAgent:
     def __init__(self):
@@ -28,6 +29,20 @@ class TasksAgent:
             {
                 "role": "user",
                 "content": user_query + self.user_prompt 
+            }
+        ]
+        response = self.llm_api.get_json_response(self.model, messages, "todos.json")
+        return response
+    
+    def generate_todos_with_members(self, user_query: str, members: Member) -> dict | None:
+        messages = [
+            {
+                "role": "system",
+                "content": self.system_prompt
+            },
+            {
+                "role": "user",
+                "content": user_query + self.user_prompt
             }
         ]
         response = self.llm_api.get_json_response(self.model, messages, "todos.json")
