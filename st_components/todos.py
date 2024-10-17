@@ -10,7 +10,9 @@ def todos_view(todos):
         grouped_todos[category].append(todo['description'])
 
     # Display todos grouped by category
-    for category, descriptions in grouped_todos.items():
-        st.header(category)
-        for description in descriptions:
-            st.checkbox(description)
+    with st.form("my_form"):
+        for category, descriptions in grouped_todos.items():
+            st.header(category)
+            for description in descriptions:
+                st.checkbox(description)
+        st.form_submit_button("Done :clear:")

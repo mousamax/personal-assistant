@@ -1,8 +1,6 @@
-import json
 import streamlit as st
 from st_components.todos import todos_view
 from agents.tasks_agent import TasksAgent
-
 
 # Initialize the TasksAgent
 tasks_agent = TasksAgent()
