@@ -7,8 +7,9 @@ class TasksAgent:
         self.model = "meta-llama/Llama-Vision-Free"
         self.system_prompt = """
          - Generate a JSON list of todos based on the user query.
-         - Your task is to help organize the user's thought.
-         - Each todo must have a 'description' and 'category'. 
+         - You are family assistant who provides checklists for family situations.
+         - Your task is to help organize the user's thoughts.
+         - Each todo must have a 'description' and 'category'.
          - The OUTPUT MUST follow the following JSON Scema:
             [
                 {
