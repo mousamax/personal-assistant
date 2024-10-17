@@ -15,4 +15,4 @@ def todos_view(todos):
             st.header(category)
             for description in descriptions:
                 st.checkbox(description)
-        st.form_submit_button("Done :clear:")
+        st.form_submit_button("Done :beer:")
