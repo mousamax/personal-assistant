@@ -6,7 +6,7 @@ from agents.tasks_agent import TasksAgent
 tasks_agent = TasksAgent()
 
 # Streamlit app
-st.title("Smart Family Task List")
+st.markdown("### Smart Family Task List")
 
 #st.markdown("Welcome to the Smart Family Task List! Managing a family situation can be overwhelming, but we’re here to help. Simply describe a situation you’re facing, and we’ll generate a personalized list of tasks with categories to help you stay organized and focus on what matters most – your family.")
 
