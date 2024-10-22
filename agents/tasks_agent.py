@@ -6,10 +6,11 @@ class TasksAgent:
         self.llm_api = LLM_API()
         self.model = "meta-llama/Llama-Vision-Free"
         self.system_prompt = """
-         - Generate a JSON list of todos based on the user query language.
-         - You are family assistant who provides checklists for family situations.
-         - Your task is to help organize the user's thoughts.
-         - Each todo must have a 'description' and 'category'.
+         - Generate a JSON list of actionable steps based on the user query language.
+         - You are family assistant who provides checklists for the given family situation.
+         - Your task is to help organizing the user's thoughts into actionable steps.
+         - Each step must have a 'description' and 'category'.
+         - Create a DETAILED list of tasks that the user can follow.
          - Answer in the user's language.
          - The OUTPUT MUST follow the following JSON Scema:
             [
