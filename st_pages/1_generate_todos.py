@@ -6,11 +6,11 @@ from agents.tasks_agent import TasksAgent
 tasks_agent = TasksAgent()
 
 # Streamlit app
-st.markdown("### Smart Family Task List")
+st.markdown("### familymind.ai organizes your family life! :house_with_garden:")
 
 #st.markdown("Welcome to the Smart Family Task List! Managing a family situation can be overwhelming, but we’re here to help. Simply describe a situation you’re facing, and we’ll generate a personalized list of tasks with categories to help you stay organized and focus on what matters most – your family.")
 
-st.markdown("#### Turn Your Family Situation into Actionable Steps! :rocket:")
+st.markdown("#### Turn your family situation into actionable steps! :rocket:")
 
 st.divider()
 
